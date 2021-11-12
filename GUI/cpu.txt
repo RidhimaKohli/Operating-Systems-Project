@@ -1,2 +1,2 @@
 Number of processor : 8
-Model : Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
+Model : Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz
