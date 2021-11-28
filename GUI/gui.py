@@ -10,7 +10,7 @@ window.geometry('600x250')
 
 
 def display():
-    subprocess.call("statCode.sh", shell=True)
+    subprocess.call(['sh', './statCode.sh'])
     output.delete(0.0, END)
     f = open("memory.txt", "r")
     data = f.read()
@@ -19,7 +19,7 @@ def display():
 
 
 def display2():
-    subprocess.call("statCode.sh", shell=True)
+    subprocess.call(['sh', './statCode.sh'])
     output.delete(0.0, END)
     f = open("cpu.txt", "r")
     data = f.read()

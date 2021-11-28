@@ -92,6 +92,23 @@ try:
     date_w_format = getFormattedDateTime(p["LocalObservationDateTime"])
 
   char_length = 50
+  a_dictionary = {"city": location,"country":country}
+  json_data = getJSONfromUrl(url)
+  json_data.append(a_dictionary)
+  jsonString = json.dumps(json_data)
+
+  # json_data.update(a_dictionary)
+  jsonFile = open("data.json", "w")
+  jsonFile.write(jsonString)
+  jsonFile.close()
+  
+
+  # with open("data.json", "r+") as file:
+  #     data = json.load(file)
+  #     data.update(a_dictionary)
+  #     file.seek(0)  
+  #     json.dump(data, file)
+    
   print(f"Location: {location}, {admin_area}, {country}") 
   print(f"Local observation time: {date_w_format}")
   print(f"Current weather status: {current_weather}")
@@ -103,9 +120,6 @@ try:
   url = f"http://dataservice.accuweather.com/forecasts/v1/daily/5day/{location_key}?apikey={API_KEY}&details=true&metric={metric_tag}"
   json_data = getJSONfromUrl(url)
   jsonString = json.dumps(json_data)
-  jsonFile = open("data.json", "w")
-  jsonFile.write(jsonString)
-  jsonFile.close()
   print(f"5-day summery: {json_data['Headline']['Text']}")
 
   for d in json_data["DailyForecasts"]:
