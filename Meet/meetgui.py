@@ -6,20 +6,17 @@ from ttkthemes import themed_style
 
 
 def populate_list():
-    f = open('details.txt', 'r')
-    for i in f.readlines():
-        names_list.insert(END, i)
-    f.close()
+    f = open('details.txt', 'w')
 
 
 def add_item():
-    f = open('details.txt', 'a')
-    prod = name_text.get()
+    f = open("details.txt", "w")
+    name = name_text.get()
     th = time_text_h.get()
     tm = time_entry_m.get()
     ret = freq_text.get()
     fw = freq_entry_w.get()
-    send = "{Name: '"+prod + "',\nHour: " + th + ",\nMins: "+tm + ",\nMonths: '" + ret + "',\nWeeks: '" + fw+"'}"
+    send = f'{th} {tm} {ret} {fw}\n'
     f.write(send)
     f.close()
     clear_text()
