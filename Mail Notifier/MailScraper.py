@@ -40,7 +40,7 @@ with open('latestUnreadMail.json', 'w') as f:
         for response in msg:
             if isinstance(response, tuple):
                 msg = email.message_from_bytes(response[1])
-                jsonContent="{"+'"'+"Date"+'"'+":"+'"'+msg["Date"]+'"'+","+'"'+"From"+'"'+":"+'"'+msg["From"]+'"'+","+'"'+"Subject"+'"'+":"+'"'+msg["Subject"]+'"'+"}"
+                jsonContent="{"+'"'+"Date"+'"'+":"+'"'+msg["Date"]+'"'+","+'"'+"From"+'"'+":"+'"'+msg["From"]+'"'+","+'"'+"Subject"+'"'+":"+'"'+msg["Subject"]+'"'+"}\n"
                 print(jsonContent)
         for part in msg.walk():
             if part.get_content_type() == "text / plain":
