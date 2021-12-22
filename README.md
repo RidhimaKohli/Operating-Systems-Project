@@ -2,6 +2,10 @@
 
 This project was developed for the Operating Systems Course ( SEMESTER 5 )
 
+## Features
+Report : [Link](https://docs.google.com/document/d/1sKb6MryKJyei9jc641CZrY7_J1jzWUY3LwTp0mvB5jM/edit?usp=sharing)
+PPT : [Link](https://docs.google.com/presentation/d/14-vCbOScsw2T-8-k8f2xVFkjSjrvN3KxYdOEb_V0tWc/edit?usp=sharing)
+
 ## Team
 <br/>
 
